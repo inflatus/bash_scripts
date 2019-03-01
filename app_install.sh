@@ -24,7 +24,6 @@ if [ "$close_distro" = "debian" ]; then
   #Remove unwanted applications
   echo "Removing unwanted applications"
   echo "------------------------------"
-  apt-get remove --purge Thunderbird* -y
   apt-get remove --purge Empathy* -y
   apt-get remove --purge AisleRiot* -y
   apt-get remove --purge Brasero* -y
