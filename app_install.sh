@@ -103,6 +103,8 @@ if [ "$close_distro" = "debian" ]; then
   #Finish install
   echo "Now finish setting up git and run PluginInstall in Vim"
   echo "Create ssh key and add it to the authorized keys for gitlab"
+  echo "Bring in repositories from Gitlab"
+  echo "Run the Python virtualenv setup"
   echo "Finished."
 
 else
