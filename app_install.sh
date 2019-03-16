@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Tested on Ubuntu 16.04 17.04
+#Tested on Ubuntu 16.04 17.04 18.04
 #Wireshark requires interaction during install
 #Added Snaps to Debian
 
@@ -95,7 +95,13 @@ if [ "$close_distro" = "debian" ]; then
   apt autoclean
   apt autoremove -y
 
+  #Setting up git"
+  cd ~
+  git config --global user.name "inflatus"
+  git config --global user.email "inflatus@gmail.com"
+
   #Finish install
+  echo "Now finish setting up git and run PluginInstall in Vim"
   echo "Finished."
 
 else
