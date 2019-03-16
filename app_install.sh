@@ -24,18 +24,20 @@ if [ "$close_distro" = "debian" ]; then
   #Remove unwanted applications
   echo "Removing unwanted applications"
   echo "------------------------------"
-  apt-get remove --purge Empathy* -y
-  apt-get remove --purge AisleRiot* -y
-  apt-get remove --purge Brasero* -y
-  apt-get remove --purge Mahjongg* -y
-  apt-get remove --purge libreoffice* -y
-  apt-get remove --purge openoffice* -y
+  apt remove --purge Empathy* -y
+  apt remove --purge AisleRiot* -y
+  apt remove --purge Brasero* -y
+  apt remove --purge Mahjongg* -y
+  apt remove --purge libreoffice* -y
+  apt remove --purge openoffice* -y
+  apt remove --purge Amazon* -y
+  apt remove --purge Remmina -y
 
   #Install applications on a fresh install of Debian based Linux
   echo "This script will install your apps after a fresh install"
   echo "--------------------------------------------------------"
-  apt-get update && apt-get dist-upgrade -y
-  apt-get install htop traceroute whois gparted curl nmap openvpn rsync iptraf openssh-client openssh-server git gimp hexchat unison atop bandwidthd uget vim python3-pip python-dev ethtool python-virtualenv tree wget glances -y
+  apt update && apt-get dist-upgrade -y
+  apt install htop traceroute whois gparted curl nmap openvpn rsync iptraf openssh-client openssh-server git gimp hexchat unison atop bandwidthd uget vim python3-pip python-dev ethtool python-virtualenv tree wget glances -y
 
   #Add repositories
   echo "Adding the repositories"
@@ -43,25 +45,25 @@ if [ "$close_distro" = "debian" ]; then
   add-apt-repository ppa:wireshark-dev/stable -y
   add-apt-repository ppa:transmissionbt/ppa:transmission-gtk -y
   add-apt-repository ppa:tails-team/tails-installer -y
-  apt-get update
-  apt-get install transmission-gtk wireshark tails-installer -y
+  apt update
+  apt install transmission-gtk wireshark tails-installer -y
   
   #Snaps
-  snap install libreoffice -y
-  snap install telegram-sergiusens -y
-  snap install simplescreenrecorder-mardy -y
-  snap install remmina -y
-  snap install vlc -y
-  snap install slack -y
-  snap install gimp -y
-  snap install discord -y
-  snap install handbrake-jz -y
+  snap install libreoffice
+  snap install telegram-sergiusens
+  snap install simplescreenrecorder-mardy
+  snap install remmina
+  snap install vlc
+  snap install slack --classic
+  snap install gimp
+  snap install discord
+  snap install handbrake-jz
 
   #Add applications that require a different means of installation
   #Chrome
   echo "Chrome install"
   echo "--------------"
-  apt-get install libxss1 libappindicator1 libindicator7
+  apt install libxss1 libappindicator1 libindicator7
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   dpkg -i google-chrome*.deb
   rm google-chrome-stable_current_amd64.deb
@@ -75,8 +77,8 @@ if [ "$close_distro" = "debian" ]; then
   #YouCompleteMe
   echo "YouCompleteMe"
   echo "------------------"
-  apt-get install build-essential cmake
-  apt-get install python-dev python3-dev
+  apt install build-essential cmake
+  apt install python-dev python3-dev
   cd ~/.vim/bundle/YouCompleteMe
   ./install.py --clang-completer
   cd ~/.vim/bundle/YouCompleteMe
@@ -85,13 +87,13 @@ if [ "$close_distro" = "debian" ]; then
   #Update all files
   echo "Updating all files"
   echo "------------------"
-  apt-get update && apt-get dist-upgrade -y
+  apt update && apt-get dist-upgrade -y
   
   #Clean
   echo "Cleaning now"
   echo "------------"
-  apt-get autoclean
-  apt-get autoremove -y
+  apt autoclean
+  apt autoremove -y
 
   #Finish install
   echo "Finished."
