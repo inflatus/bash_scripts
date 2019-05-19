@@ -58,6 +58,7 @@ if [ "$close_distro" = "debian" ]; then
   snap install gimp
   snap install discord
   snap install handbrake-jz
+  snap install qshodan
 
   #Add applications that require a different means of installation
   #Chrome
