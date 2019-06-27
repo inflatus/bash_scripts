@@ -51,7 +51,6 @@ if [ "$close_distro" = "debian" ]; then
   #Snaps
   snap install libreoffice
   snap install telegram-sergiusens
-  snap install simplescreenrecorder-mardy
   snap install remmina
   snap install vlc
   snap install slack --classic
@@ -92,13 +91,6 @@ if [ "$close_distro" = "debian" ]; then
   echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo tee /etc/apt/sources.list.d/cisofy-lynis.list
   apt update
   apt install lynis
-
-  #Brave Browser
-  curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-  source /etc/os-release
-  echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
-  sudo apt update
-  sudo apt install brave-keyring brave-browser
 
   #Update all files
   echo "Updating all files"
