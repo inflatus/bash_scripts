@@ -37,7 +37,7 @@ if [ "$close_distro" = "debian" ]; then
   echo "This script will install your apps after a fresh install"
   echo "--------------------------------------------------------"
   apt update && apt-get dist-upgrade -y
-  apt install htop traceroute whois gparted curl nmap openvpn rsync iptraf openssh-client openssh-server git gimp hexchat unison atop bandwidthd uget vim python3-pip python-dev ethtool python-virtualenv tree wget glances -y
+  apt install htop traceroute whois gparted curl nmap openvpn rsync iptraf openssh-client openssh-server git gimp hexchat unison atop bandwidthd uget vim python3-pip python-dev ethtool python-virtualenv tree wget glances ffmpeg -y
 
   #Add repositories
   echo "Adding the repositories"
@@ -56,7 +56,6 @@ if [ "$close_distro" = "debian" ]; then
   snap install slack --classic
   snap install gimp
   snap install discord
-  snap install handbrake-jz
   snap install qshodan
 
   #Add applications that require a different means of installation
@@ -146,17 +145,6 @@ else
   dnf check-update -y
   dnf install google-chrome -y
 
-  #Handbrake
-  echo "Handbrake"
-  echo "------------"
-  dnf groupinstall "Development Tools" "Development Libraries" -y
-  dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make opus-devel patch python tar x264-devel yasm zlib-devel -y
-  dnf groupinstall "X Software Development" "GNOME Software Development" -y
-  dnf install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel -y
-  git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
-  ./configure --launch-jobs=$(nproc) --launch
-  cd build && sudo make install
-
   #Remmina
   echo "Remmina"
   echo "------------"
@@ -185,6 +173,11 @@ else
   echo "Glances"
   echo "------------"
   wget -O- https://bit.ly/glances | /bin/bash
+
+  #ffmpeg
+  dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+  dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+  dnf -y install ffmpeg
 
   #Update all files
   dnf check-update -y
