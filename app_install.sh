@@ -76,6 +76,7 @@ if [ "$close_distro" = "debian" ]; then
   #YouCompleteMe
   echo "YouCompleteMe"
   echo "------------------"
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   apt install build-essential cmake
   apt install python-dev python3-dev
   cd ~/.vim/bundle/YouCompleteMe
@@ -90,6 +91,9 @@ if [ "$close_distro" = "debian" ]; then
   echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | sudo tee /etc/apt/sources.list.d/cisofy-lynis.list
   apt update
   apt install lynis
+
+  #downloading .vimrc and .bashrc
+  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
 
   #Update all files
   echo "Updating all files"
@@ -162,12 +166,13 @@ else
   #YouCompleteMe
   echo "YouCompleteMe"
   echo "------------"
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   dnf install automake gcc gcc-c++ kernel-devel cmake -y
   dnf install python-devel python3-devel -y
   cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer -y
+  ./install.py --clang-completer
   cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --all -y
+  ./install.py --all
 
   #Glances
   echo "Glances"
@@ -178,6 +183,9 @@ else
   dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
   dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
   dnf -y install ffmpeg
+
+  #downloading .vimrc and .bashrc
+  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
 
   #Update all files
   dnf check-update -y
