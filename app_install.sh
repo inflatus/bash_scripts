@@ -94,6 +94,7 @@ if [ "$close_distro" = "debian" ]; then
 
   #downloading .vimrc and .bashrc
   curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
+  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
 
   #Update all files
   echo "Updating all files"
@@ -186,7 +187,8 @@ else
 
   #downloading .vimrc and .bashrc
   curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
-
+  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
+  
   #Update all files
   dnf check-update -y
   dnf upgrade --refresh -y
