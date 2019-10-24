@@ -17,3 +17,5 @@ export PATH
 
 # User specific aliases and functions
 alias python=python3
+alias upgrades='sudo bash ~/bash_scripts/update.sh'
+alias myip='curl ipapi.io/ip'
