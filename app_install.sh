@@ -159,9 +159,9 @@ else
   #LibreOffice 6.0.3
   echo "LibreOffice 6.0.3"
   echo "------------"
-  wget http://mirror.clarkson.edu/tdf/libreoffice/stable/6.0.3/rpm/x86_64/LibreOffice_6.0.3_Linux_x86-64_rpm.tar.gz 
-  tar zxvf LibreOffice_6.0.3_Linux_x86-64_rpm.tar.gz
-  cd LibreOffice_6.0.3.2_Linux_x86-64_rpm/RPMS
+  wget https://www.libreoffice.org/donate/dl/rpm-x86_64/6.3.4/en-US/LibreOffice_6.3.4_Linux_x86-64_rpm.tar.gz 
+  tar zxvf LibreOffice_6.3.4_Linux_x86-64_rpm.tar.gz
+  cd LibreOffice_6.3.4._Linux_x86-64_rpm/RPMS
   dnf install *.rpm -y
 
   #YouCompleteMe
