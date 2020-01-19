@@ -70,8 +70,7 @@ if [ "$close_distro" = "debian" ]; then
   #Youtube Downloader
   echo "Youtube Downloader"
   echo "------------------"
-  wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-  chmod a=+rx /usr/local/bin/youtube-dl
+  pip3 install --upgrade youtube_dl
 
   #YouCompleteMe
   echo "YouCompleteMe"
@@ -136,8 +135,7 @@ else
   #Youtube Downloader
   echo "Youtube Downloader"
   echo "------------"
-  wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-  chmod a+rx /usr/local/bin/youtube-dl
+  pip3 install --upgrade youtube_dl
 
   #Chrome
   echo "Chrome"
