@@ -129,7 +129,7 @@ else
   echo "This script will install your apps after a fresh install"
   dnf check-update -y
   dnf upgrade --refresh -y
-  dnf install htop traceroute jwhois gparted curl nmap openvpn rsync iptraf openssh-clients openssh-server git gimp wireshark-qt hexchat atop uget vim python3-pip python-devel ethtool python3-virtualenv tree transmission-gtk wget -y
+  dnf install htop traceroute jwhois gparted curl nmap openvpn rsync iptraf openssh-clients openssh-server git gimp wireshark-qt hexchat atop uget vim python3-pip python-devel ethtool python3-virtualenv tree transmission-gtk wget vlc -y 
   dnf clean all
 
   #Youtube Downloader
@@ -157,9 +157,9 @@ else
   #LibreOffice 6.0.3
   echo "LibreOffice 6.0.3"
   echo "------------"
-  wget https://www.libreoffice.org/donate/dl/rpm-x86_64/6.3.4/en-US/LibreOffice_6.3.4_Linux_x86-64_rpm.tar.gz 
-  tar zxvf LibreOffice_6.3.4_Linux_x86-64_rpm.tar.gz
-  cd LibreOffice_6.3.4._Linux_x86-64_rpm/RPMS
+  wget https://download.documentfoundation.org/libreoffice/stable/6.4.0/rpm/x86_64/LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
+  tar zxvf LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
+  cd LibreOffice_6.4.0._Linux_x86-64_rpm/RPMS
   dnf install *.rpm -y
 
   #YouCompleteMe
