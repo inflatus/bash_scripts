@@ -154,8 +154,8 @@ else
   dnf copr enable hubbitus/remmina-next -y
   dnf upgrade --refresh 'remmina*' 'freerdp*' -y
 
-  #LibreOffice 6.0.3
-  echo "LibreOffice 6.0.3"
+  #LibreOffice 6.4.0
+  echo "LibreOffice 6.4.0"
   echo "------------"
   wget https://download.documentfoundation.org/libreoffice/stable/6.4.0/rpm/x86_64/LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
   tar zxvf LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
