@@ -1,9 +1,7 @@
-# Merged repo to GitLab
+### Merged repo to GitLab
 
-# bash_scripts
+#### bash_scripts
 
-# Will continue to add scripts to this repository
+#### Will continue to add scripts to this repository
 
-# Possible places to go with scripting is with sys admin tools
-
-#
+#### Possible places to go with scripting is with sys admin tools
