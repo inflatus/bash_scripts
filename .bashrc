@@ -19,3 +19,5 @@ export PATH
 alias python=python3
 alias upgrades='sudo bash ~/bash_scripts/update.sh'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias protonp2p='sudo protonvpn c --p2p'
+alias proton='sudo protonvpn c --cc us'
