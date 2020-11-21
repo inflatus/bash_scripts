@@ -8,7 +8,7 @@
   echo "$current_distro"
   echo "$close_distro"
 
-if [ "$close_distro" = "debian" ]; then
+if [[ "$close_distro" == *"$debian"* ]]; then
 
   #Debian
   apt update
