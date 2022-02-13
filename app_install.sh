@@ -1,6 +1,8 @@
 #!/bin/bash
 
-#Tested on Ubuntu 16.04 17.04 18.04
+#Still need to go through the apps that get installed and decide which ones are needed and how to install them
+
+#Tested on Ubuntu 16.04 17.04 18.04 21.04
 #Wireshark requires interaction during install
 #Added Snaps to Debian
 
@@ -72,17 +74,6 @@ if [ "$close_distro" = "debian" ]; then
   echo "------------------"
   pip3 install --upgrade youtube_dl
 
-  #YouCompleteMe
-  echo "YouCompleteMe"
-  echo "------------------"
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  apt install build-essential cmake
-  apt install python-dev python3-dev
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --all
-
   #Lynis
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C80E383C3DE9F082E01391A0366C67DE91CA5D5F
   apt install apt-transport-https
@@ -92,8 +83,8 @@ if [ "$close_distro" = "debian" ]; then
   apt install lynis
 
   #downloading .vimrc and .bashrc
-  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
-  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
+  #curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
+  #curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
 
   #Update all files
   echo "Updating all files"
@@ -162,17 +153,6 @@ else
   cd LibreOffice_6.4.0._Linux_x86-64_rpm/RPMS
   dnf install *.rpm -y
 
-  #YouCompleteMe
-  echo "YouCompleteMe"
-  echo "------------"
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  dnf install automake gcc gcc-c++ kernel-devel cmake -y
-  dnf install python-devel python3-devel -y
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --all
-
   #Glances
   echo "Glances"
   echo "------------"
@@ -184,8 +164,8 @@ else
   dnf -y install ffmpeg
 
   #downloading .vimrc and .bashrc
-  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
-  curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
+  #curl https://inflatus.io/inflatus/bash_scripts/raw/master/.vimrc?inline=false
+  #curl https://inflatus.io/inflatus/bash_scripts/raw/master/.bashrc?inline=false
   
   #Update all files
   dnf check-update -y
