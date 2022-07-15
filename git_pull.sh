@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 #using this to git pull the following folders on my machine
 #bash_scripts
@@ -9,15 +9,15 @@
 
 #git pull bash_scripts
 echo "git pull bash_scripts"
-cd ~/Programming/bash_scripts
+cd ~/Programming/bash_scripts || exit
 git pull 
 
 #git pull python
 echo "git pull python"
-cd ~/Programming/python
+cd ~/Programming/python || exit
 git pull 
 
 #git pull tryhackme
 echo "git pull tryhackme"
-cd ~/Programming/tryhackme
+cd ~/Programming/tryhackme || exit
 git pull
