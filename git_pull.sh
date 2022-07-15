@@ -18,5 +18,3 @@ git pull ~/Programming/python
 #git pull tryhackme
 echo "git pull tryhackme"
 git pull ~/Programming/tryhackme
-
-fi
