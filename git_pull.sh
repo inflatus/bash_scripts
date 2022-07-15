@@ -9,12 +9,15 @@
 
 #git pull bash_scripts
 echo "git pull bash_scripts"
-git pull ~/Programming/bash_scripts
+cd ~/Programming/bash_scripts
+git pull 
 
 #git pull python
 echo "git pull python"
-git pull ~/Programming/python
+cd ~/Programming/python
+git pull 
 
 #git pull tryhackme
 echo "git pull tryhackme"
-git pull ~/Programming/tryhackme
+cd ~/Programming/tryhackme
+git pull
