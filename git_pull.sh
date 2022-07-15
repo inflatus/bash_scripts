@@ -10,14 +10,14 @@
 #git pull bash_scripts
 echo "git pull bash_scripts"
 cd ~/Programming/bash_scripts || exit
-git pull >> bash_scripts
+git pull
 
 #git pull python
 echo "git pull python"
 cd ~/Programming/python || exit
-git pull >> python
+git pull
 
 #git pull tryhackme
 echo "git pull tryhackme"
 cd ~/Programming/tryhackme || exit
-git pull >> tryhackme
+git pull
