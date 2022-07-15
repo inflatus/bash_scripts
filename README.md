@@ -1,5 +1,3 @@
-### Merged repo to GitLab
-
 #### bash_scripts
 
 #### Will continue to add scripts to this repository
