@@ -98,7 +98,7 @@ if [ "$close_distro" = "debian" ]; then
   apt autoremove -y
 
   #Setting up git"
-  cd ~
+  cd ~ || exit
   git config --global user.name "inflatus"
   git config --global user.email "inflatus@gmail.com"
 
@@ -150,7 +150,7 @@ else
   echo "------------"
   wget https://download.documentfoundation.org/libreoffice/stable/6.4.0/rpm/x86_64/LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
   tar zxvf LibreOffice_6.4.0_Linux_x86-64_rpm.tar.gz
-  cd LibreOffice_6.4.0._Linux_x86-64_rpm/RPMS
+  cd LibreOffice_6.4.0._Linux_x86-64_rpm/RPMS || exit
   dnf install *.rpm -y
 
   #Glances
