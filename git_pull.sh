@@ -9,15 +9,18 @@
 
 #git pull bash_scripts
 echo "git pull bash_scripts"
+sleep 30
 cd ~/Programming/bash_scripts || exit
 git pull
 
 #git pull python
 echo "git pull python"
+sleep 30
 cd ~/Programming/python || exit
 git pull
 
 #git pull tryhackme
 echo "git pull tryhackme"
+sleep 30
 cd ~/Programming/tryhackme || exit
 git pull
