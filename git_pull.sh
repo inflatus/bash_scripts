@@ -11,16 +11,21 @@
 echo "git pull bash_scripts"
 sleep 15
 cd ~/Programming/bash_scripts || exit
-git pull
+git pull origin main
 
 #git pull python
 echo "git pull python"
 sleep 15
 cd ~/Programming/python || exit
-git pull
+git pull origin main
 
 #git pull tryhackme
 echo "git pull tryhackme"
 sleep 15
 cd ~/Programming/tryhackme || exit
-git pull
+git pull origin main
+
+#git pull picoctf
+echo "git pull picoctf"
+cd ~/Programming/picoctf || exit
+git pull origin main
