@@ -4,6 +4,7 @@
 #bash_scripts
 #python
 #tryhackme
+#picoctf
 
 #will add more folders as they are created
 
